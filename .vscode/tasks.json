@@ -23,7 +23,7 @@
             "command": "${env:HOME}/.pico-sdk/picotool/2.1.1/picotool/picotool",
             "args": [
                 "load",
-                "${workspaceRoot}/build/src/PiPico-freeRTOS-proj.elf",
+                "${command:raspberry-pi-pico.launchTargetPath}",
                 "-fx"
             ],
             "presentation": {
@@ -45,8 +45,7 @@
                 "-f",
                 "interface/cmsis-dap.cfg",
                 "-f",
-                // "target/${command:raspberry-pi-pico.getTarget}.cfg",
-                "${workspaceRoot}/build/src/PiPico-freeRTOS-proj.elf",
+                "target/${command:raspberry-pi-pico.getTarget}.cfg",
                 "-c",
                 "adapter speed 5000; program \"${command:raspberry-pi-pico.launchTargetPath}\" verify reset exit"
             ],
