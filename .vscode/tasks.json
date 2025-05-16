@@ -23,7 +23,8 @@
             "command": "${env:HOME}/.pico-sdk/picotool/2.1.1/picotool/picotool",
             "args": [
                 "load",
-                "${command:raspberry-pi-pico.launchTargetPath}",
+                // "${command:raspberry-pi-pico.launchTargetPath}",
+                "C:/Users/princ/OneDrive/Desktop/ProgrammingPractice/C/FreeRTOS_projects/build/src/PiPico-freeRTOS-proj.elf",
                 "-fx"
             ],
             "presentation": {
